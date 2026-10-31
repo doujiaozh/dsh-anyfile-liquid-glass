@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#05060c">
+  <title>AnyFile Liquid Glass — 任意文件液态玻璃化</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- 极光背景 / Aurora backdrop -->
+  <div class="aurora" aria-hidden="true">
+    <span class="blob b1"></span>
+    <span class="blob b2"></span>
+    <span class="blob b3"></span>
+    <span class="blob b4"></span>
+  </div>
+
+  <header class="topbar">
+    <div class="brand">
+      <div class="brand-mark" aria-hidden="true"></div>
+      <div class="brand-text">
+        <h1>AnyFile <em>Liquid&nbsp;Glass</em></h1>
+        <p>任意文件 · 皆可玻璃化 · pure HTML / CSS / Canvas 2D</p>
+      </div>
+    </div>
+    <div class="topbar-actions">
+      <button id="demoBtn" class="glass-btn primary" type="button">✦ 示例 Demo</button>
+      <button id="clearBtn" class="glass-btn ghost" type="button">清空</button>
+    </div>
+  </header>
+
+  <main class="layout">
+    <!-- 拖拽交互大厅 / Drop lobby -->
+    <section id="dropzone" class="dropzone">
+      <div class="dz-inner">
+        <div class="dz-icon" aria-hidden="true">⇩</div>
+        <h2>把任意文件拖到这里</h2>
+        <p>图片 / 文本 / 代码 / 二进制 —— 统统渲染成液态玻璃三维卡片</p>
+        <button id="pickBtn" class="glass-btn primary" type="button">或选择文件</button>
+        <input id="fileInput" class="visually-hidden" type="file" multiple hidden>
+      </div>
+    </section>
+
+    <!-- 瀑布流卡片大厅 / Waterfall gallery -->
+    <section id="gallery" class="gallery" aria-live="polite"></section>
+
+    <p id="status" class="status" role="status"></p>
+  </main>
+
+  <footer class="foot">
+    <span>AnyFile Liquid Glass · 用 CSS 给数字世界穿上玻璃外壳</span>
+    <span>Win7 友好 · 零依赖 · 零 WebGL</span>
+  </footer>
+
+  <script src="js/lg_file_oracle.js"></script>
+  <script src="js/lg_render_card.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
